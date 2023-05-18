@@ -15,7 +15,7 @@
 
 
     /*-----------------------------HEADER (BACKGROUND IMAGE AND MAIN HEADING)------------------------------------------- */
-  .full-width-image-container {
+  .header-bg-container {
     position: relative;
     width: 100%;
     height: 600px;
@@ -23,7 +23,7 @@
   }
 
   /* Center the image */
-  .full-width-image-container img {
+  .header-bg-container img {
     width: 100%;
     height: auto;
     object-fit: cover;
