@@ -160,19 +160,32 @@
       }
   
       .centered-heading{                  /* MAIN HEADING FONT */
-          font-size: 22px;
+          font-size: 20px;
       }
   
       .secondary-header{                 /* SECONDARY HEADING FONT  */
-          font-size: 20px;
+          font-size: 17px;
           font-weight: bold;
           text-align: center;
       }
   
       .paragraph{                        /* PARAGRAPH FONT  */
           text-align: center;
-          font-size: 16px;
+          font-size: 13px;
       }
+
+      .about-us-p{
+        font-size: 13px;
+     }
+
+     .our-service-p{
+       font-size: 13px;
+    }
+      .footer p{
+        font-size: 10px;
+      }
+
+      
   }
 
   
