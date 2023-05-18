@@ -1,146 +1,191 @@
-/* Reset default margin and padding */
-body{
-    margin: 0;
-    padding: 0;
-   
-}
 
 
-/* Font setup */ 
-body {
+    /* Font setup */ 
+    body {
     font-family: 'Open Sans', sans-serif;
-}
+    }
+    
+    primary-color{
+        background-color:#00aeef;
+    }
 
+    secondary-color{
+        background-color:  #4a4949; 
+    }
 
+  /* Add underline to the active nav-link */
+  .nav-link.active {
+    text-decoration: underline;
+  }
 
-/* Style for the navigation bar */
-.navbar {
-    background-color:  #00aeef;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
+  /* Add space between nav-link and underline */
+  .nav-link {
+    position: relative;
+    padding-bottom: 4px;
+  }
 
-/* Style for the logo */
-.navbar .logo {
-    width: 130px;
-    height: auto;
-}
-
-/* Style for the menu options */
-.navbar .menu {
-    list-style: none;
-    display: flex;
-}
-
-.navbar .menu li {
-    margin-left: 20px;
-}
-
-.navbar .menu li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Style for the image section */
-.image-section {
-    background-image: url('image/try.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+  /* Style the underline */
+  .nav-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
 
-.image-section h1 {
-    color: #fff;
-    font-size: 22px;
-    text-align: center;
-}
+  /* Animate the underline on hover */
+  .nav-link:hover:after {
+    transform: scaleX(1);
+  }
 
+  /* Remove underline for mobile screens */
+  @media (max-width: 767px) {
+    .nav-link:after {
+      display: none;
+      
+    }
+  }
 
-/* Style for the row section */
-.row-section {
-    display: flex;
-    padding: 20px;
-}
+  /* Add full-width image container */
+  .full-width-image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
 
-/* Style for the image */
-.image {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.image img {
-    max-width: 100%;
+  /* Center the image */
+  .full-width-image-container img {
+    width: 100%;
     height: auto;
-    display: block;
-}
+    object-fit: cover;
+  }
 
-/* Style for the content */
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .centered-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-}
+  }
 
-.content h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #00aeef;
-    text-transform: uppercase;
-}
-
-.content p {
-    font-size: 16px;
-}
-
-     
-
-    /* Style for the web section */
-    .web-section {
-        display: flex;
-        padding: 20px;
+  /* Responsive height for mobile devices */
+  @media (max-width: 767px) {
+    .full-width-image-container {
+      height: 200px;
     }
 
-    /* Style for the columns */
-    .column {
-        flex: 1;
-        padding: 0 10px;
+    .centered-heading{
+        font-size: 22px;
     }
 
-    .column h2 {
-        text-align: center;
+    .secondary-header{
         font-size: 20px;
-        margin-bottom: 20px;
-        text-decoration: underline;
-        color: #00aeef;
+        font-weight: bold;
+        text-align: center;
     }
 
-    .column p {
+    .paragraph{
         text-align: center;
         font-size: 16px;
     }
-    /* Style for the footer section */
-    .footer {
-        background-color: #4a4949;
-        padding: 20px;
+  }
+
+  .footer {
+    background-color:  #4a4949;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+  .footer span{
+        color: #00aeef;
+    }
+
+  
+
+    /* Remove underline from "Our Services" nav item */
+    .navbar-nav .nav-item .nav-link.our-services:after {
+      display: none;
+    }
+
+
+     /* Adjust dropdown menu */
+     .navbar .dropdown-menu {
+      background-color: #00aeef;
+      margin-top: 0;
+      min-width: auto;
+      
+    }
+    
+    /* Show dropdown menu on hover */
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    
+    /* Add hover color to dropdown items */
+    .navbar .dropdown-item:hover {
+      background-color: #ffffff;
+    }
+
+    /* Add underline to the underlined-heading class */
+  .underlined-heading {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Add space between the underline and text */
+  }
+
+  /* Style the underline */
+  .underlined-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00aeef;
+  }
+
+  .logo-container {
+  margin-top: 0;
+}
+
+
+.centered-heading{
+        font-size: 22px;
+    }
+
+    .secondary-header{
+        color: #00aeef;
+        font-size: 20px;
+        font-weight: bold;
         text-align: center;
     }
 
-    .footer p {
-        font-size: 14px;
-        color: #888;
+    .paragraph{
+        text-align: center;
+        font-size: 16px;
     }
 
-    .footer span{
-        color: #00aeef;
+    .nav-font{
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
     }
+    .navbar-nav .nav-item .nav-link {
+        color: #4a4949;
+    }
+    
+
+    
