@@ -29,7 +29,7 @@
                     <a class="nav-link nav-font" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-font" href="#">About</a>
+                    <a class="nav-link nav-font" href="#about-section">About</a>
                 </li>
                 
                 <li class="nav-item dropdown">
@@ -38,16 +38,16 @@
                     Our Services
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item nav-font" href="#">Web Design</a>
-                    <a class="dropdown-item nav-font" href="#">Web Development</a>
-                    <a class="dropdown-item nav-font" href="#">Mobile App Design</a>
+                    <a class="dropdown-item nav-font" href="#web-section">Web Design</a>
+                    <a class="dropdown-item nav-font" href="#web-section">Web Development</a>
+                    <a class="dropdown-item nav-font" href="#web-section">Mobile App Design</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-font" href="#">Blog</a>
+                    <a class="nav-link nav-font" href="blog.html" target="_blank">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-font" href="#">Contact</a>
+                    <a class="nav-link nav-font" href="contact.html" target="_blank">Contact</a>
                 </li>
             </ul>
         </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="card h-100">
-                    <div class="card-body about-us-bg">
+                    <div class="card-body about-us-bg" id="about-section">
                         <h1 class="secondary-header">ABOUT US</h1>
                         <p class="Paragraph about-us-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis tortor id varius
                         feugiat. Nam iaculis risus sed est volutpat, non hendrerit velit tristique. Fusce auctor velit eget metus
@@ -96,17 +96,17 @@
     <!---------------------------- WEB DESIGN, DEVELOPMENT AND MOBILE APP DESIGN ---------------------------------->
     <div class="container mt-5">
         <div class="row">
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4 text-center" id="web-section">
                 <h1 class=" secondary-header underlined-heading">Web Design</h1>
                 <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis tortor id varius feugiat. Nam iaculis
                 risus sed est volutpat, non hendrerit velit tristique. Fusce auctor velit eget metus eleifend rhoncus.</p>
             </div>
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4 text-center" id="web-section">
                 <h1 class="secondary-header underlined-heading">Web Development</h1>
                 <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis tortor id varius feugiat. Nam iaculis
                 risus sed est volutpat, non hendrerit velit tristique. Fusce auctor velit eget metus eleifend rhoncus.</p>
             </div>
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4 text-center" id="web-section">
                 <h1 class="secondary-header underlined-heading">Mobile App Design</h1>
                 <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis tortor id varius feugiat. Nam iaculis
                 risus sed est volutpat, non hendrerit velit tristique. Fusce auctor velit eget metus eleifend rhoncus.</p>
@@ -128,6 +128,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Smooth scroll to section
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $($(this).attr('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 800);
+            }
+        });
+    });
+    </script>
 </body>
 </html>
 
