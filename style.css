@@ -188,6 +188,28 @@
       
   }
 
+  .scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00aeef;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .scroll-to-top-btn:focus {
+    outline: none;
+  }
+  
+  
+  
+
   
   
  /*-----------------------------FOOTER------------------------------------------- */
